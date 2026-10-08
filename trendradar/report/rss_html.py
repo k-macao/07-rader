@@ -42,7 +42,7 @@ def render_rss_html_content(
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RSS 订阅内容</title>
+        <title>章鱼 AI·新闻雷达 · RSS 订阅</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
             * { box-sizing: border-box; }
@@ -51,7 +51,7 @@ def render_rss_html_content(
                 margin: 0;
                 padding: 16px;
                 background: #fafafa;
-                color: #333;
+                color: #333333;
                 line-height: 1.5;
             }
 
@@ -65,7 +65,7 @@ def render_rss_html_content(
             }
 
             .header {
-                background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+                background: linear-gradient(135deg, #747474 0%, #919191 100%);
                 color: white;
                 padding: 32px 24px;
                 text-align: center;
@@ -157,17 +157,17 @@ def render_rss_html_content(
                 justify-content: space-between;
                 margin-bottom: 16px;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #10b981;
+                border-bottom: 2px solid #919191;
             }
 
             .feed-name {
                 font-size: 16px;
                 font-weight: 600;
-                color: #059669;
+                color: #747474;
             }
 
             .feed-count {
-                color: #666;
+                color: #666666;
                 font-size: 13px;
                 font-weight: 500;
             }
@@ -175,9 +175,9 @@ def render_rss_html_content(
             .rss-item {
                 margin-bottom: 16px;
                 padding: 16px;
-                background: #f9fafb;
+                background: #fafafa;
                 border-radius: 8px;
-                border-left: 3px solid #10b981;
+                border-left: 3px solid #919191;
             }
 
             .rss-item:last-child {
@@ -193,12 +193,12 @@ def render_rss_html_content(
             }
 
             .rss-time {
-                color: #6b7280;
+                color: #727272;
                 font-size: 12px;
             }
 
             .rss-author {
-                color: #059669;
+                color: #747474;
                 font-size: 12px;
                 font-weight: 500;
             }
@@ -212,7 +212,7 @@ def render_rss_html_content(
             }
 
             .rss-link {
-                color: #2563eb;
+                color: #606060;
                 text-decoration: none;
             }
 
@@ -221,12 +221,12 @@ def render_rss_html_content(
             }
 
             .rss-link:visited {
-                color: #7c3aed;
+                color: #555555;
             }
 
             .rss-summary {
                 font-size: 13px;
-                color: #6b7280;
+                color: #727272;
                 line-height: 1.6;
                 margin: 0;
                 display: -webkit-box;
@@ -238,32 +238,32 @@ def render_rss_html_content(
             .footer {
                 margin-top: 32px;
                 padding: 20px 24px;
-                background: #f8f9fa;
-                border-top: 1px solid #e5e7eb;
+                background: #f9f9f9;
+                border-top: 1px solid #e7e7e7;
                 text-align: center;
             }
 
             .footer-content {
                 font-size: 13px;
-                color: #6b7280;
+                color: #727272;
                 line-height: 1.6;
             }
 
             .footer-link {
-                color: #059669;
+                color: #747474;
                 text-decoration: none;
                 font-weight: 500;
                 transition: color 0.2s ease;
             }
 
             .footer-link:hover {
-                color: #10b981;
+                color: #919191;
                 text-decoration: underline;
             }
 
             .project-name {
                 font-weight: 600;
-                color: #374151;
+                color: #404040;
             }
 
             @media (max-width: 480px) {
@@ -287,7 +287,71 @@ def render_rss_html_content(
                     width: 100%;
                 }
             }
-        </style>
+
+        /* 墨水屏风格：黑白灰配色，保留清晰的新闻阅读层级 */
+        :root { color-scheme: light; }
+        body {
+            background: #e7e7e7;
+            color: #292929;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
+        }
+        .container {
+            background: #fafafa;
+            border: 1px solid #c3c3c3;
+            border-radius: 6px;
+            box-shadow: none;
+        }
+        .header {
+            background: #292929;
+            background-image: none;
+            border-bottom: 1px solid #141414;
+        }
+        .header-title {
+            font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+            font-size: 24px;
+            letter-spacing: 0.04em;
+        }
+        .header-title { margin-bottom: 6px; }
+        .header-subtitle {
+            color: #cccccc;
+            font-size: 14px;
+            margin: 0 0 20px;
+            letter-spacing: 0.03em;
+        }
+        .content { background: #fafafa; }
+        .feed-header { border-bottom-color: #777777; }
+        .feed-name { color: #303030; }
+        .rss-item { border-color: #c6c6c6; }
+        .rss-title,
+        .project-name { color: #252525; }
+        .news-link,
+        .rss-link,
+        .footer-link,
+        .rss-author { color: #3b3b3b; }
+        .news-link:visited,
+        .rss-link:visited { color: #686868; }
+        .rss-item {
+            background: #efefef;
+            border-left-color: #626262;
+            border-radius: 4px;
+        }
+        .footer {
+            background: #eeeeee;
+            border-top-color: #c3c3c3;
+        }
+        .footer-content { color: #555555; }
+        .save-btn {
+            color: #ffffff;
+            background: rgba(255,255,255,0.14);
+            border-color: rgba(255,255,255,0.42);
+            border-radius: 4px;
+            box-shadow: none;
+            backdrop-filter: none;
+            transition: background-color 0.15s ease;
+        }
+        .save-btn:hover { background: rgba(255,255,255,0.25); }
+</style>
     </head>
     <body>
         <div class="container">
@@ -295,7 +359,8 @@ def render_rss_html_content(
                 <div class="save-buttons">
                     <button class="save-btn" onclick="saveAsImage()">保存为图片</button>
                 </div>
-                <div class="header-title">RSS 订阅内容</div>
+                <div class="header-title">章鱼 AI·新闻雷达</div>
+                <div class="header-subtitle">RSS 订阅内容</div>
                 <div class="header-info">
                     <div class="info-item">
                         <span class="info-label">订阅条目</span>
@@ -445,7 +510,7 @@ def render_rss_html_content(
 
                     const link = document.createElement('a');
                     const now = new Date();
-                    const filename = `TrendRadar_RSS订阅_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}.png`;
+                    const filename = `章鱼AI_RSS订阅_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}.png`;
 
                     link.download = filename;
                     link.href = canvas.toDataURL('image/png', 1.0);
