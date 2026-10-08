@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>热点新闻分析</title>
+    <title>章鱼 AI·新闻雷达</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         * {
@@ -14,7 +14,7 @@
             margin: 0;
             padding: 16px;
             background: #fafafa;
-            color: #333;
+            color: #333333;
             line-height: 1.5;
         }
 
@@ -28,7 +28,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #535353 0%, #555555 100%);
             color: white;
             padding: 32px 24px;
             text-align: center;
@@ -136,23 +136,23 @@
         }
 
         .word-count {
-            color: #666;
+            color: #666666;
             font-size: 13px;
             font-weight: 500;
         }
 
         .word-count.hot {
-            color: #dc2626;
+            color: #4d4d4d;
             font-weight: 600;
         }
 
         .word-count.warm {
-            color: #ea580c;
+            color: #727272;
             font-weight: 600;
         }
 
         .word-index {
-            color: #999;
+            color: #999999;
             font-size: 12px;
         }
 
@@ -171,13 +171,13 @@
         }
 
         .news-number {
-            color: #999;
+            color: #999999;
             font-size: 13px;
             font-weight: 600;
             min-width: 20px;
             text-align: center;
             flex-shrink: 0;
-            background: #f8f9fa;
+            background: #f9f9f9;
             border-radius: 50%;
             width: 24px;
             height: 24px;
@@ -202,14 +202,14 @@
         }
 
         .source-name {
-            color: #666;
+            color: #666666;
             font-size: 12px;
             font-weight: 500;
         }
 
         .rank-num {
-            color: #fff;
-            background: #6b7280;
+            color: #ffffff;
+            background: #727272;
             font-size: 10px;
             font-weight: 700;
             padding: 2px 6px;
@@ -219,20 +219,20 @@
         }
 
         .rank-num.top {
-            background: #dc2626;
+            background: #4d4d4d;
         }
 
         .rank-num.high {
-            background: #ea580c;
+            background: #727272;
         }
 
         .time-info {
-            color: #999;
+            color: #999999;
             font-size: 11px;
         }
 
         .count-info {
-            color: #059669;
+            color: #747474;
             font-size: 11px;
             font-weight: 500;
         }
@@ -245,7 +245,7 @@
         }
 
         .news-link {
-            color: #2563eb;
+            color: #606060;
             text-decoration: none;
         }
 
@@ -254,38 +254,38 @@
         }
 
         .news-link:visited {
-            color: #7c3aed;
+            color: #555555;
         }
 
         .footer {
             margin-top: 32px;
             padding: 20px 24px;
-            background: #f8f9fa;
-            border-top: 1px solid #e5e7eb;
+            background: #f9f9f9;
+            border-top: 1px solid #e7e7e7;
             text-align: center;
         }
 
         .footer-content {
             font-size: 13px;
-            color: #6b7280;
+            color: #727272;
             line-height: 1.6;
         }
 
         .footer-link {
-            color: #4f46e5;
+            color: #535353;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
         }
 
         .footer-link:hover {
-            color: #7c3aed;
+            color: #555555;
             text-decoration: underline;
         }
 
         .project-name {
             font-weight: 600;
-            color: #374151;
+            color: #404040;
         }
 
         @media (max-width: 480px) {
@@ -329,7 +329,84 @@
                 width: 100%;
             }
         }
-    </style>
+
+        /* 墨水屏风格：黑白灰配色，保留清晰的新闻阅读层级 */
+        :root { color-scheme: light; }
+        body {
+            background: #e7e7e7;
+            color: #292929;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
+        }
+        .container {
+            background: #fafafa;
+            border: 1px solid #c3c3c3;
+            border-radius: 6px;
+            box-shadow: none;
+        }
+        .header {
+            background: #292929;
+            background-image: none;
+            border-bottom: 1px solid #141414;
+        }
+        .header-title {
+            font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+            font-size: 24px;
+            letter-spacing: 0.04em;
+        }
+        .content { background: #fafafa; }
+        .word-header,
+        .feed-header { border-bottom-color: #c7c7c7; }
+        .news-item { border-bottom-color: #e2e2e2; }
+        .word-name,
+        .news-title,
+        .feed-name,
+        .rss-title,
+        .project-name { color: #252525; }
+        .word-count.hot,
+        .word-count.warm,
+        .count-info,
+        .news-link,
+        .rss-link,
+        .footer-link,
+        .rss-author { color: #3b3b3b; }
+        .news-link:visited,
+        .rss-link:visited { color: #686868; }
+        .rank-num {
+            color: #292929;
+            background: #dedede;
+            border: 1px solid #bcbcbc;
+            border-radius: 3px;
+        }
+        .rank-num.top { color: #ffffff; background: #343434; }
+        .rank-num.high { color: #ffffff; background: #707070; }
+        .news-number {
+            color: #555555;
+            background: #ededed;
+            border: 1px solid #cdcdcd;
+            border-radius: 3px;
+        }
+        .rss-item {
+            background: #efefef;
+            border-left-color: #626262;
+            border-radius: 4px;
+        }
+        .footer {
+            background: #eeeeee;
+            border-top-color: #c3c3c3;
+        }
+        .footer-content { color: #555555; }
+        .save-btn {
+            color: #ffffff;
+            background: rgba(255,255,255,0.14);
+            border-color: rgba(255,255,255,0.42);
+            border-radius: 4px;
+            box-shadow: none;
+            backdrop-filter: none;
+            transition: background-color 0.15s ease;
+        }
+        .save-btn:hover { background: rgba(255,255,255,0.25); }
+</style>
 </head>
 <body>
     <div class="container">
@@ -338,7 +415,7 @@
                 <button class="save-btn" onclick="saveAsImage()">保存为图片</button>
                 <button class="save-btn" onclick="saveAsMultipleImages()">分段保存</button>
             </div>
-            <div class="header-title">热点新闻分析</div>
+            <div class="header-title">章鱼 AI·新闻雷达</div>
             <div class="header-info">
                 <div class="info-item">
                     <span class="info-label">报告类型</span>
@@ -543,7 +620,7 @@
                 
                 const link = document.createElement('a');
                 const now = new Date();
-                const filename = `TrendRadar_热点新闻分析_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}.png`;
+                const filename = `章鱼AI_新闻雷达_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}.png`;
                 
                 link.download = filename;
                 link.href = canvas.toDataURL('image/png', 1.0);
@@ -708,7 +785,7 @@
                 buttons.style.visibility = 'visible';
                 
                 const now = new Date();
-                const baseFilename = `TrendRadar_热点新闻分析_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}`;
+                const baseFilename = `章鱼AI_新闻雷达_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}`;
                 
                 for (let i = 0; i < images.length; i++) {
                     const link = document.createElement('a');

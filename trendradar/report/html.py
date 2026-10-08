@@ -58,7 +58,7 @@ def render_html_content(
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>热点新闻分析</title>
+        <title>章鱼 AI·新闻雷达</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
             * { box-sizing: border-box; }
@@ -67,7 +67,7 @@ def render_html_content(
                 margin: 0;
                 padding: 16px;
                 background: #fafafa;
-                color: #333;
+                color: #333333;
                 line-height: 1.5;
             }
 
@@ -81,7 +81,7 @@ def render_html_content(
             }
 
             .header {
-                background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+                background: linear-gradient(135deg, #535353 0%, #555555 100%);
                 color: white;
                 padding: 32px 24px;
                 text-align: center;
@@ -200,7 +200,7 @@ def render_html_content(
                 padding: 9px 14px;
                 background: none;
                 border: none;
-                color: #374151;
+                color: #404040;
                 font-size: 13px;
                 cursor: pointer;
                 border-radius: 6px;
@@ -210,8 +210,8 @@ def render_html_content(
             }
 
             .save-dropdown-item:hover {
-                background: #f3f4f6;
-                color: #4f46e5;
+                background: #f4f4f4;
+                color: #535353;
             }
 
             .dropdown-icon {
@@ -290,16 +290,16 @@ def render_html_content(
             }
 
             .word-count {
-                color: #666;
+                color: #666666;
                 font-size: 13px;
                 font-weight: 500;
             }
 
-            .word-count.hot { color: #dc2626; font-weight: 600; }
-            .word-count.warm { color: #ea580c; font-weight: 600; }
+            .word-count.hot { color: #4d4d4d; font-weight: 600; }
+            .word-count.warm { color: #727272; font-weight: 600; }
 
             .word-index {
-                color: #999;
+                color: #999999;
                 font-size: 12px;
             }
 
@@ -322,8 +322,8 @@ def render_html_content(
                 position: absolute;
                 top: 12px;
                 right: 0;
-                background: #fbbf24;
-                color: #92400e;
+                background: #c1c1c1;
+                color: #4e4e4e;
                 font-size: 9px;
                 font-weight: 700;
                 padding: 3px 6px;
@@ -332,13 +332,13 @@ def render_html_content(
             }
 
             .news-number {
-                color: #999;
+                color: #999999;
                 font-size: 13px;
                 font-weight: 600;
                 min-width: 20px;
                 text-align: center;
                 flex-shrink: 0;
-                background: #f8f9fa;
+                background: #f9f9f9;
                 border-radius: 50%;
                 width: 24px;
                 height: 24px;
@@ -360,20 +360,20 @@ def render_html_content(
             .news-item:hover .news-number .num-text { opacity: 0; }
             .news-item:hover .news-number .copy-icon { opacity: 1; }
             .news-item:hover .news-number {
-                background: #eef2ff;
-                color: #4f46e5;
+                background: #f2f2f2;
+                color: #535353;
             }
             .news-number.copied {
-                background: #dcfce7 !important;
+                background: #f4f4f4 !important;
             }
             .news-number.copied .num-text { opacity: 0 !important; }
             .news-number.copied .copy-icon { opacity: 1 !important; }
             body.dark-mode .news-item:hover .news-number {
-                background: #4338ca;
-                color: #e0e7ff;
+                background: #454545;
+                color: #e7e7e7;
             }
             body.dark-mode .news-number.copied {
-                background: #166534 !important;
+                background: #515151 !important;
             }
 
             .news-content {
@@ -395,23 +395,23 @@ def render_html_content(
             }
 
             .source-name {
-                color: #666;
+                color: #666666;
                 font-size: 12px;
                 font-weight: 500;
             }
 
             .keyword-tag {
-                color: #2563eb;
+                color: #606060;
                 font-size: 12px;
                 font-weight: 500;
-                background: #eff6ff;
+                background: #f5f5f5;
                 padding: 2px 6px;
                 border-radius: 4px;
             }
 
             .rank-num {
-                color: #fff;
-                background: #6b7280;
+                color: #ffffff;
+                background: #727272;
                 font-size: 10px;
                 font-weight: 700;
                 padding: 2px 6px;
@@ -420,8 +420,8 @@ def render_html_content(
                 text-align: center;
             }
 
-            .rank-num.top { background: #dc2626; }
-            .rank-num.high { background: #ea580c; }
+            .rank-num.top { background: #4d4d4d; }
+            .rank-num.high { background: #727272; }
 
             .trend-up, .trend-down {
                 font-size: 12px;
@@ -430,12 +430,12 @@ def render_html_content(
             }
 
             .time-info {
-                color: #999;
+                color: #999999;
                 font-size: 11px;
             }
 
             .count-info {
-                color: #059669;
+                color: #747474;
                 font-size: 11px;
                 font-weight: 500;
             }
@@ -448,7 +448,7 @@ def render_html_content(
             }
 
             .news-link {
-                color: #2563eb;
+                color: #606060;
                 text-decoration: none;
             }
 
@@ -457,14 +457,14 @@ def render_html_content(
             }
 
             .news-link:visited {
-                color: #7c3aed;
+                color: #555555;
             }
 
             /* 通用区域分割线样式 */
             .section-divider {
                 margin-top: 32px;
                 padding-top: 24px;
-                border-top: 2px solid #e5e7eb;
+                border-top: 2px solid #e7e7e7;
             }
 
             /* 热榜统计区样式 */
@@ -489,7 +489,7 @@ def render_html_content(
             }
 
             .new-source-title {
-                color: #666;
+                color: #666666;
                 font-size: 13px;
                 font-weight: 500;
                 margin: 0 0 12px 0;
@@ -510,13 +510,13 @@ def render_html_content(
             }
 
             .new-item-number {
-                color: #999;
+                color: #999999;
                 font-size: 12px;
                 font-weight: 600;
                 min-width: 18px;
                 text-align: center;
                 flex-shrink: 0;
-                background: #f8f9fa;
+                background: #f9f9f9;
                 border-radius: 50%;
                 width: 20px;
                 height: 20px;
@@ -526,8 +526,8 @@ def render_html_content(
             }
 
             .new-item-rank {
-                color: #fff;
-                background: #6b7280;
+                color: #ffffff;
+                background: #727272;
                 font-size: 10px;
                 font-weight: 700;
                 padding: 3px 6px;
@@ -537,8 +537,8 @@ def render_html_content(
                 flex-shrink: 0;
             }
 
-            .new-item-rank.top { background: #dc2626; }
-            .new-item-rank.high { background: #ea580c; }
+            .new-item-rank.top { background: #4d4d4d; }
+            .new-item-rank.high { background: #727272; }
 
             .new-item-content {
                 flex: 1;
@@ -553,15 +553,15 @@ def render_html_content(
             }
 
             .error-section {
-                background: #fef2f2;
-                border: 1px solid #fecaca;
+                background: #f5f5f5;
+                border: 1px solid #d5d5d5;
                 border-radius: 8px;
                 padding: 16px;
                 margin-bottom: 24px;
             }
 
             .error-title {
-                color: #dc2626;
+                color: #4d4d4d;
                 font-size: 14px;
                 font-weight: 600;
                 margin: 0 0 8px 0;
@@ -574,7 +574,7 @@ def render_html_content(
             }
 
             .error-item {
-                color: #991b1b;
+                color: #363636;
                 font-size: 13px;
                 padding: 2px 0;
                 font-family: 'SF Mono', Consolas, monospace;
@@ -583,32 +583,32 @@ def render_html_content(
             .footer {
                 margin-top: 32px;
                 padding: 20px 24px;
-                background: #f8f9fa;
-                border-top: 1px solid #e5e7eb;
+                background: #f9f9f9;
+                border-top: 1px solid #e7e7e7;
                 text-align: center;
             }
 
             .footer-content {
                 font-size: 13px;
-                color: #6b7280;
+                color: #727272;
                 line-height: 1.6;
             }
 
             .footer-link {
-                color: #4f46e5;
+                color: #535353;
                 text-decoration: none;
                 font-weight: 500;
                 transition: color 0.2s ease;
             }
 
             .footer-link:hover {
-                color: #7c3aed;
+                color: #555555;
                 text-decoration: underline;
             }
 
             .project-name {
                 font-weight: 600;
-                color: #374151;
+                color: #404040;
             }
 
             @media (max-width: 480px) {
@@ -655,11 +655,11 @@ def render_html_content(
             .rss-section-title {
                 font-size: 18px;
                 font-weight: 600;
-                color: #059669;
+                color: #747474;
             }
 
             .rss-section-count {
-                color: #6b7280;
+                color: #727272;
                 font-size: 14px;
             }
 
@@ -677,17 +677,17 @@ def render_html_content(
                 justify-content: space-between;
                 margin-bottom: 12px;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #10b981;
+                border-bottom: 2px solid #919191;
             }
 
             .feed-name {
                 font-size: 15px;
                 font-weight: 600;
-                color: #059669;
+                color: #747474;
             }
 
             .feed-count {
-                color: #666;
+                color: #666666;
                 font-size: 13px;
                 font-weight: 500;
             }
@@ -695,9 +695,9 @@ def render_html_content(
             .rss-item {
                 margin-bottom: 12px;
                 padding: 14px;
-                background: #f0fdf4;
+                background: #fafafa;
                 border-radius: 8px;
-                border-left: 3px solid #10b981;
+                border-left: 3px solid #919191;
             }
 
             .rss-item:last-child {
@@ -713,12 +713,12 @@ def render_html_content(
             }
 
             .rss-time {
-                color: #6b7280;
+                color: #727272;
                 font-size: 12px;
             }
 
             .rss-author {
-                color: #059669;
+                color: #747474;
                 font-size: 12px;
                 font-weight: 500;
             }
@@ -730,19 +730,19 @@ def render_html_content(
             }
 
             .rss-link {
-                color: #1f2937;
+                color: #282828;
                 text-decoration: none;
                 font-weight: 500;
             }
 
             .rss-link:hover {
-                color: #059669;
+                color: #747474;
                 text-decoration: underline;
             }
 
             .rss-summary {
                 font-size: 13px;
-                color: #6b7280;
+                color: #727272;
                 line-height: 1.5;
                 margin: 0;
                 display: -webkit-box;
@@ -767,11 +767,11 @@ def render_html_content(
             .standalone-section-title {
                 font-size: 18px;
                 font-weight: 600;
-                color: #059669;
+                color: #747474;
             }
 
             .standalone-section-count {
-                color: #6b7280;
+                color: #727272;
                 font-size: 14px;
             }
 
@@ -799,7 +799,7 @@ def render_html_content(
             }
 
             .standalone-count {
-                color: #666;
+                color: #666666;
                 font-size: 13px;
                 font-weight: 500;
             }
@@ -808,9 +808,9 @@ def render_html_content(
             .ai-section {
                 margin-top: 32px;
                 padding: 24px;
-                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                background: linear-gradient(135deg, #f8f8f8 0%, #efefef 100%);
                 border-radius: 12px;
-                border: 1px solid #bae6fd;
+                border: 1px solid #dedede;
             }
 
             .ai-section-header {
@@ -823,11 +823,11 @@ def render_html_content(
             .ai-section-title {
                 font-size: 18px;
                 font-weight: 600;
-                color: #0369a1;
+                color: #575757;
             }
 
             .ai-section-badge {
-                background: #0ea5e9;
+                background: #8a8a8a;
                 color: white;
                 font-size: 11px;
                 font-weight: 600;
@@ -850,41 +850,41 @@ def render_html_content(
             .ai-block-title {
                 font-size: 14px;
                 font-weight: 600;
-                color: #0369a1;
+                color: #575757;
                 margin-bottom: 8px;
             }
 
             .ai-block-content {
                 font-size: 14px;
                 line-height: 1.6;
-                color: #334155;
+                color: #3f3f3f;
                 white-space: pre-wrap;
             }
 
             .ai-error {
                 padding: 16px;
-                background: #fef2f2;
-                border: 1px solid #fecaca;
+                background: #f5f5f5;
+                border: 1px solid #d5d5d5;
                 border-radius: 8px;
-                color: #991b1b;
+                color: #363636;
                 font-size: 14px;
             }
 
             .ai-warning {
                 padding: 16px;
-                background: #fffbeb;
-                border: 1px solid #fde68a;
+                background: #fbfbfb;
+                border: 1px solid #e4e4e4;
                 border-radius: 8px;
-                color: #92400e;
+                color: #4e4e4e;
                 font-size: 14px;
             }
 
             .ai-info {
                 padding: 16px;
-                background: #f0f9ff;
-                border: 1px solid #bae6fd;
+                background: #f8f8f8;
+                border: 1px solid #dedede;
                 border-radius: 8px;
-                color: #0369a1;
+                color: #575757;
                 font-size: 14px;
             }
 
@@ -936,7 +936,7 @@ def render_html_content(
                 display: none;
                 margin-bottom: 20px;
                 align-items: stretch;
-                border-bottom: 2px solid #e5e7eb;
+                border-bottom: 2px solid #e7e7e7;
             }
             body.wide-mode .tab-bar-wrapper { display: flex; }
             body.wide-mode .tab-bar-wrapper.tab-hidden { display: none; }
@@ -978,14 +978,14 @@ def render_html_content(
                 justify-content: center;
                 background: none;
                 border: none;
-                color: #9ca3af;
+                color: #a2a2a2;
                 font-size: 20px;
                 font-weight: 300;
                 cursor: pointer;
                 padding: 0;
                 transition: color 0.15s ease;
             }
-            .tab-arrow:hover { color: #4f46e5; }
+            .tab-arrow:hover { color: #535353; }
             .tab-arrow.visible { display: flex; }
 
             .tab-scroll-indicator {
@@ -994,7 +994,7 @@ def render_html_content(
                 left: 0;
                 width: 0;
                 height: 2px;
-                background: #4f46e5;
+                background: #535353;
                 border-radius: 0 1px 1px 0;
                 transition: width 0.1s linear;
             }
@@ -1005,8 +1005,8 @@ def render_html_content(
                 gap: 6px;
                 padding: 8px 16px;
                 border: none;
-                background: #f3f4f6;
-                color: #6b7280;
+                background: #f4f4f4;
+                color: #727272;
                 border-radius: 8px;
                 cursor: pointer;
                 font-size: 13px;
@@ -1015,8 +1015,8 @@ def render_html_content(
                 transition: all 0.2s ease;
                 flex-shrink: 0;
             }
-            .tab-btn:hover { background: #e5e7eb; color: #374151; }
-            .tab-btn.active { background: #4f46e5; color: white; }
+            .tab-btn:hover { background: #e7e7e7; color: #404040; }
+            .tab-btn.active { background: #535353; color: white; }
             .tab-count {
                 font-size: 11px;
                 background: rgba(0,0,0,0.1);
@@ -1030,15 +1030,15 @@ def render_html_content(
             .search-input {
                 width: 100%;
                 padding: 10px 16px;
-                border: 1px solid #e5e7eb;
+                border: 1px solid #e7e7e7;
                 border-radius: 8px;
                 font-size: 14px;
                 outline: none;
                 transition: border-color 0.2s;
                 box-sizing: border-box;
             }
-            .search-input:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
-            .search-input::placeholder { color: #9ca3af; }
+            .search-input:focus { border-color: #535353; box-shadow: 0 0 0 3px rgba(83,83,83,0.1); }
+            .search-input::placeholder { color: #a2a2a2; }
 
             /* 右下角悬浮工具栏 */
             .fab-bar {
@@ -1063,7 +1063,7 @@ def render_html_content(
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
-                background: #4f46e5;
+                background: #535353;
                 color: white;
                 border: none;
                 cursor: pointer;
@@ -1075,16 +1075,16 @@ def render_html_content(
                 justify-content: center;
                 position: relative;
             }
-            .fab-btn:hover { transform: scale(1.1); background: #4338ca; }
-            body.dark-mode .fab-btn { background: #533483; }
-            body.dark-mode .fab-btn:hover { background: #6d28d9; }
+            .fab-btn:hover { transform: scale(1.1); background: #454545; }
+            body.dark-mode .fab-btn { background: #404040; }
+            body.dark-mode .fab-btn:hover { background: #434343; }
 
             /* 快捷键 tooltip */
             .fab-tooltip {
                 position: absolute;
                 bottom: 0;
                 right: 52px;
-                background: rgba(30, 30, 50, 0.92);
+                background: rgba(31, 31, 31, 0.92);
                 backdrop-filter: blur(12px);
                 color: white;
                 border-radius: 10px;
@@ -1127,14 +1127,14 @@ def render_html_content(
                 display: none;
                 margin-right: 6px;
                 font-size: 12px;
-                color: #9ca3af;
+                color: #a2a2a2;
                 transition: transform 0.2s;
                 user-select: none;
             }
             .word-header.collapsible { cursor: pointer; }
             .word-header.collapsible .collapse-icon { display: inline; }
             .word-header.collapsible:hover {
-                background: #f9fafb;
+                background: #fafafa;
                 border-radius: 6px;
                 margin: 0 -8px 20px -8px;
                 padding: 8px;
@@ -1171,18 +1171,18 @@ def render_html_content(
 
             /* ===== 暗色模式 ===== */
             body.dark-mode {
-                background: #0f172a;
-                color: #e2e8f0;
+                background: #171717;
+                color: #e7e7e7;
             }
             body.dark-mode .container {
-                background: #1e293b;
+                background: #282828;
                 box-shadow: 0 4px 24px rgba(0,0,0,0.4);
             }
             body.dark-mode .header {
-                background: linear-gradient(135deg, #3730a3 0%, #7c3aed 100%);
+                background: linear-gradient(135deg, #3a3a3a 0%, #555555 100%);
             }
             body.dark-mode .content {
-                background: #1e293b;
+                background: #282828;
             }
 
             /* 文字颜色 */
@@ -1190,7 +1190,7 @@ def render_html_content(
             body.dark-mode .new-section-title,
             body.dark-mode .standalone-name,
             body.dark-mode .new-item-title,
-            body.dark-mode .project-name { color: #f1f5f9; }
+            body.dark-mode .project-name { color: #f4f4f4; }
             body.dark-mode .word-count,
             body.dark-mode .word-index,
             body.dark-mode .source-name,
@@ -1203,7 +1203,7 @@ def render_html_content(
             body.dark-mode .news-meta,
             body.dark-mode .rss-time,
             body.dark-mode .rss-author,
-            body.dark-mode .rss-summary { color: #94a3b8; }
+            body.dark-mode .rss-summary { color: #a1a1a1; }
             body.dark-mode .info-value { color: white; }
 
             /* 链接 */
@@ -1211,20 +1211,20 @@ def render_html_content(
             body.dark-mode .rss-title a,
             body.dark-mode .new-item a,
             body.dark-mode .standalone-item a,
-            body.dark-mode .rss-link { color: #93c5fd; }
-            body.dark-mode .news-title a:visited { color: #c4b5fd; }
-            body.dark-mode .rss-link:hover { color: #6ee7b7; }
+            body.dark-mode .rss-link { color: #bebebe; }
+            body.dark-mode .news-title a:visited { color: #bdbdbd; }
+            body.dark-mode .rss-link:hover { color: #cacaca; }
 
             /* 强调色 */
             body.dark-mode .keyword-tag {
-                background: rgba(99,102,241,0.15);
-                color: #a5b4fc;
+                background: rgba(111,111,111,0.15);
+                color: #b6b6b6;
             }
-            body.dark-mode .count-info { color: #6ee7b7; }
+            body.dark-mode .count-info { color: #cacaca; }
             body.dark-mode .rss-source,
             body.dark-mode .feed-name,
             body.dark-mode .rss-section-title,
-            body.dark-mode .standalone-section-title { color: #6ee7b7; }
+            body.dark-mode .standalone-section-title { color: #cacaca; }
 
             /* 边框与分割线 */
             body.dark-mode .word-header,
@@ -1232,125 +1232,125 @@ def render_html_content(
             body.dark-mode .new-item,
             body.dark-mode .standalone-item,
             body.dark-mode .new-source-title,
-            body.dark-mode .standalone-header { border-bottom-color: #334155; }
-            body.dark-mode .section-divider { border-top-color: #334155; }
-            body.dark-mode .feed-header { border-bottom-color: #166534; }
-            body.dark-mode .tab-bar { border-bottom-color: #334155; }
+            body.dark-mode .standalone-header { border-bottom-color: #3f3f3f; }
+            body.dark-mode .section-divider { border-top-color: #3f3f3f; }
+            body.dark-mode .feed-header { border-bottom-color: #515151; }
+            body.dark-mode .tab-bar { border-bottom-color: #3f3f3f; }
 
             /* 序号圆圈 */
             body.dark-mode .news-number,
             body.dark-mode .new-item-number {
-                background: #334155;
-                color: #94a3b8;
+                background: #3f3f3f;
+                color: #a1a1a1;
             }
 
             /* 折叠 hover */
-            body.dark-mode .word-header.collapsible:hover { background: #253347; }
+            body.dark-mode .word-header.collapsible:hover { background: #313131; }
 
             /* Tab 栏 */
             body.dark-mode .tab-bar-wrapper {
-                background: #1e293b;
-                border-bottom-color: #334155;
+                background: #282828;
+                border-bottom-color: #3f3f3f;
             }
-            body.dark-mode .tab-arrow { color: #64748b; }
-            body.dark-mode .tab-arrow:hover { color: #c4b5fd; }
-            body.dark-mode .tab-scroll-indicator { background: #818cf8; }
+            body.dark-mode .tab-arrow { color: #727272; }
+            body.dark-mode .tab-arrow:hover { color: #bdbdbd; }
+            body.dark-mode .tab-scroll-indicator { background: #919191; }
             body.dark-mode .tab-btn {
-                background: #334155;
-                color: #94a3b8;
+                background: #3f3f3f;
+                color: #a1a1a1;
             }
             body.dark-mode .tab-btn:hover {
-                background: #475569;
-                color: #e2e8f0;
+                background: #535353;
+                color: #e7e7e7;
             }
             body.dark-mode .tab-btn.active {
-                background: #6d28d9;
+                background: #434343;
                 color: white;
             }
-            body.dark-mode .tab-bar::-webkit-scrollbar-track { background: #1e293b; }
-            body.dark-mode .tab-bar::-webkit-scrollbar-thumb { background: #475569; }
+            body.dark-mode .tab-bar::-webkit-scrollbar-track { background: #282828; }
+            body.dark-mode .tab-bar::-webkit-scrollbar-thumb { background: #535353; }
 
             /* 搜索框 */
             body.dark-mode .search-input {
-                background: #1e293b;
-                border-color: #334155;
-                color: #e2e8f0;
+                background: #282828;
+                border-color: #3f3f3f;
+                color: #e7e7e7;
             }
             body.dark-mode .search-input:focus {
-                border-color: #818cf8;
-                box-shadow: 0 0 0 3px rgba(129,140,248,0.15);
+                border-color: #919191;
+                box-shadow: 0 0 0 3px rgba(145,145,145,0.15);
             }
-            body.dark-mode .search-input::placeholder { color: #64748b; }
+            body.dark-mode .search-input::placeholder { color: #727272; }
 
             /* RSS 卡片 */
             body.dark-mode .rss-item {
-                background: #1a2e25;
-                border-left-color: #059669;
+                background: #292929;
+                border-left-color: #747474;
             }
 
             /* AI 分析区 */
             body.dark-mode .ai-section {
-                background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);
-                border-color: #334155;
+                background: linear-gradient(135deg, #1f1f1f 0%, #282828 100%);
+                border-color: #3f3f3f;
             }
-            body.dark-mode .ai-section-title { color: #a5b4fc; }
-            body.dark-mode .ai-section-badge { background: #4f46e5; }
+            body.dark-mode .ai-section-title { color: #b6b6b6; }
+            body.dark-mode .ai-section-badge { background: #535353; }
             body.dark-mode .ai-block {
-                background: #1e293b;
-                border-color: #334155;
+                background: #282828;
+                border-color: #3f3f3f;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.2);
             }
-            body.dark-mode .ai-block-title { color: #a5b4fc; }
-            body.dark-mode .ai-block-content { color: #cbd5e1; }
+            body.dark-mode .ai-block-title { color: #b6b6b6; }
+            body.dark-mode .ai-block-content { color: #d4d4d4; }
             body.dark-mode .ai-warning {
-                background: #422006;
-                border-color: #854d0e;
-                color: #fbbf24;
+                background: #252525;
+                border-color: #545454;
+                color: #c1c1c1;
             }
             body.dark-mode .ai-error {
-                background: #450a0a;
-                border-color: #991b1b;
-                color: #fca5a5;
+                background: #171717;
+                border-color: #363636;
+                color: #b7b7b7;
             }
             body.dark-mode .ai-info {
-                background: #172554;
-                border-color: #1e40af;
-                color: #93c5fd;
+                background: #252525;
+                border-color: #414141;
+                color: #bebebe;
             }
 
             /* 错误区 */
             body.dark-mode .error-section {
-                background: #1c1917;
-                border-color: #78350f;
+                background: #191919;
+                border-color: #414141;
             }
-            body.dark-mode .error-title { color: #fca5a5; }
-            body.dark-mode .error-item { color: #f87171; }
+            body.dark-mode .error-title { color: #b7b7b7; }
+            body.dark-mode .error-item { color: #8e8e8e; }
 
             /* Footer */
             body.dark-mode .footer {
-                background: #0f172a;
-                border-top-color: #334155;
-                color: #94a3b8;
+                background: #171717;
+                border-top-color: #3f3f3f;
+                color: #a1a1a1;
             }
-            body.dark-mode .footer-link { color: #93c5fd; }
-            body.dark-mode .footer-link:hover { color: #c4b5fd; }
+            body.dark-mode .footer-link { color: #bebebe; }
+            body.dark-mode .footer-link:hover { color: #bdbdbd; }
 
             /* 悬浮按钮 */
-            body.dark-mode .fab-btn { background: #6d28d9; }
-            body.dark-mode .fab-btn:hover { background: #7c3aed; }
+            body.dark-mode .fab-btn { background: #434343; }
+            body.dark-mode .fab-btn:hover { background: #555555; }
 
             /* 下拉菜单 */
             body.dark-mode .save-dropdown-menu {
-                background: rgba(30,41,59,0.95);
-                border-color: #475569;
+                background: rgba(40,40,40,0.95);
+                border-color: #535353;
                 box-shadow: 0 8px 24px rgba(0,0,0,0.4);
             }
             body.dark-mode .save-dropdown-item {
-                color: #e2e8f0;
+                color: #e7e7e7;
             }
             body.dark-mode .save-dropdown-item:hover {
-                background: #334155;
-                color: #c4b5fd;
+                background: #3f3f3f;
+                color: #bdbdbd;
             }
 
             /* 暗色模式切换按钮 */
@@ -1381,12 +1381,12 @@ def render_html_content(
                 top: 0; left: 0;
                 width: 0;
                 height: 3px;
-                background: linear-gradient(90deg, #4f46e5, #7c3aed);
+                background: linear-gradient(90deg, #535353, #555555);
                 z-index: 9999;
                 transition: width 0.1s linear;
             }
             body.dark-mode .reading-progress {
-                background: linear-gradient(90deg, #8ab4f8, #c58af9);
+                background: linear-gradient(90deg, #b0b0b0, #9f9f9f);
             }
 
             /* 复制按钮样式已集成到 .news-number */
@@ -1396,7 +1396,7 @@ def render_html_content(
             /* 新上榜标记 */
             .badge-new {
                 display: inline-block;
-                background: linear-gradient(135deg, #f43f5e, #ec4899);
+                background: linear-gradient(135deg, #686868, #717171);
                 color: white;
                 font-size: 10px;
                 font-weight: 600;
@@ -1407,15 +1407,297 @@ def render_html_content(
                 letter-spacing: 0.5px;
             }
             body.dark-mode .badge-new {
-                background: linear-gradient(135deg, #be185d, #9333ea);
+                background: linear-gradient(135deg, #404040, #555555);
             }
-        </style>
+
+            /* 墨水屏阅读样式：纸白底色、炭黑标题与克制的灰阶分隔 */
+            :root { color-scheme: light; }
+            body {
+                background: #e7e7e7;
+                color: #292929;
+                line-height: 1.65;
+                letter-spacing: 0.01em;
+            }
+            body.dark-mode {
+                color-scheme: dark;
+                background: #252525;
+                color: #eeeeee;
+            }
+            .container {
+                background: #fafafa;
+                border: 1px solid #c3c3c3;
+                border-radius: 6px;
+                box-shadow: none;
+            }
+            body.dark-mode .container {
+                background: #303030;
+                border-color: #575757;
+                box-shadow: none;
+            }
+            .header,
+            body.dark-mode .header {
+                background: #292929;
+                background-image: none;
+                border-bottom: 1px solid #141414;
+            }
+            .header-watermark { display: none; }
+            .header-title {
+                font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+                font-size: clamp(22px, 4vw, 26px);
+                letter-spacing: 0.04em;
+            }
+            .header-info { opacity: 1; }
+            .info-label { color: #c9c9c9; opacity: 1; }
+            .info-value { color: #ffffff; }
+            .content { background: #fafafa; }
+            body.dark-mode .content { background: #303030; }
+
+            .word-header,
+            .standalone-header,
+            .new-source-title { border-bottom-color: #d4d4d4; }
+            .news-item,
+            .new-item { border-bottom-color: #e2e2e2; }
+            .section-divider { border-top-color: #c7c7c7; }
+            .word-name,
+            .news-title,
+            .new-section-title,
+            .new-item-title,
+            .standalone-name { color: #252525; }
+            .word-count.hot,
+            .word-count.warm,
+            .count-info,
+            .rss-section-title,
+            .feed-name,
+            .rss-author,
+            .standalone-section-title,
+            .ai-section-title,
+            .ai-block-title,
+            .footer-link,
+            .news-link,
+            .rss-link,
+            .new-item a,
+            .standalone-item a { color: #3b3b3b; }
+            .news-link:visited,
+            .rss-link:visited { color: #686868; }
+            .keyword-tag {
+                color: #414141;
+                background: #e9e9e9;
+                border: 1px solid #d1d1d1;
+            }
+            .rank-num,
+            .new-item-rank {
+                color: #292929;
+                background: #dedede;
+                border: 1px solid #bcbcbc;
+                border-radius: 3px;
+            }
+            .rank-num.top,
+            .new-item-rank.top { color: #ffffff; background: #343434; }
+            .rank-num.high,
+            .new-item-rank.high { color: #ffffff; background: #707070; }
+            .news-number,
+            .new-item-number {
+                color: #555555;
+                background: #ededed;
+                border: 1px solid #cdcdcd;
+                border-radius: 3px;
+            }
+            .news-number { background: #ededed; }
+            .news-item:hover .news-number { color: #252525; background: #dcdcdc; }
+            .news-number.copied { background: #e1e1e1 !important; }
+            .rss-section-title,
+            .standalone-section-title { color: #303030; }
+            .feed-header { border-bottom-color: #777777; }
+            .rss-item {
+                background: #efefef;
+                border-left-color: #626262;
+                border-radius: 4px;
+            }
+            .ai-section {
+                background: #eeeeee;
+                border-color: #bbbbbb;
+                border-radius: 6px;
+            }
+            .ai-section-badge,
+            .badge-new { color: #ffffff; background: #4d4d4d; }
+            .ai-block {
+                background: #fafafa;
+                border: 1px solid #d0d0d0;
+                border-radius: 4px;
+                box-shadow: none;
+            }
+            .ai-block-content { color: #393939; }
+            .ai-warning,
+            .ai-error,
+            .ai-info,
+            .error-section {
+                color: #303030;
+                background: #eeeeee;
+                border-color: #bbbbbb;
+                border-radius: 4px;
+            }
+            .error-title,
+            .error-item { color: #383838; }
+            .footer {
+                background: #eeeeee;
+                border-top-color: #c3c3c3;
+            }
+            .footer-content,
+            .footer-link { color: #555555; }
+            .footer-link:hover { color: #222222; }
+            .tab-bar-wrapper { background: #fafafa; }
+            .tab-btn {
+                color: #454545;
+                background: #e8e8e8;
+                border: 1px solid #c6c6c6;
+                border-radius: 3px;
+            }
+            .tab-btn:hover { color: #252525; background: #dcdcdc; }
+            .tab-btn.active { color: #ffffff; background: #4a4a4a; }
+            .tab-btn.active .tab-count { background: rgba(255,255,255,0.24); }
+            .search-input {
+                color: #292929;
+                background: #fafafa;
+                border-color: #bcbcbc;
+                border-radius: 4px;
+            }
+            .search-input:focus { border-color: #555555; box-shadow: 0 0 0 2px rgba(50,50,50,0.12); }
+            .save-btn,
+            .save-dropdown-trigger,
+            .toggle-wide-btn,
+            .toggle-dark-btn {
+                color: #ffffff;
+                background: rgba(255,255,255,0.14);
+                border-color: rgba(255,255,255,0.42);
+                border-radius: 4px;
+                box-shadow: none;
+                backdrop-filter: none;
+                transition: background-color 0.15s ease;
+            }
+            .save-btn:hover,
+            .save-dropdown-trigger:hover,
+            .toggle-wide-btn:hover,
+            .toggle-dark-btn:hover { background: rgba(255,255,255,0.25); }
+            .save-dropdown-menu {
+                background: #fafafa;
+                border-color: #bcbcbc;
+                border-radius: 4px;
+                box-shadow: none;
+                backdrop-filter: none;
+            }
+            .save-dropdown-item { color: #333333; }
+            .save-dropdown-item:hover { color: #202020; background: #e7e7e7; }
+            .fab-btn {
+                color: #ffffff;
+                background: #4b4b4b;
+                border: 1px solid #303030;
+                border-radius: 4px;
+                box-shadow: none;
+            }
+            .fab-btn:hover { background: #303030; }
+            .fab-tooltip {
+                background: #303030;
+                border-color: #686868;
+                border-radius: 4px;
+                box-shadow: none;
+                backdrop-filter: none;
+            }
+            .reading-progress { height: 2px; background: #5a5a5a; }
+            .container,
+            .ai-section,
+            .ai-block,
+            .rss-item,
+            .error-section,
+            .ai-warning,
+            .ai-error,
+            .ai-info,
+            .tab-btn,
+            .rank-num,
+            .new-item-rank,
+            .news-number,
+            .new-item-number,
+            .save-btn,
+            .save-dropdown-menu,
+            .fab-btn { box-shadow: none; }
+
+            /* 暗色墨水屏模式仍只使用黑、白、灰 */
+            body.dark-mode .word-name,
+            body.dark-mode .news-title,
+            body.dark-mode .news-title a,
+            body.dark-mode .new-section-title,
+            body.dark-mode .new-item-title,
+            body.dark-mode .standalone-name,
+            body.dark-mode .project-name,
+            body.dark-mode .ai-section-title,
+            body.dark-mode .ai-block-title { color: #eeeeee; }
+            body.dark-mode .word-count,
+            body.dark-mode .word-index,
+            body.dark-mode .source-name,
+            body.dark-mode .time-info,
+            body.dark-mode .feed-count,
+            body.dark-mode .new-source-title,
+            body.dark-mode .standalone-count,
+            body.dark-mode .rss-section-count,
+            body.dark-mode .standalone-section-count,
+            body.dark-mode .rss-time,
+            body.dark-mode .rss-author,
+            body.dark-mode .rss-summary,
+            body.dark-mode .footer-content { color: #bcbcbc; }
+            body.dark-mode .news-link,
+            body.dark-mode .rss-link,
+            body.dark-mode .footer-link,
+            body.dark-mode .new-item a,
+            body.dark-mode .standalone-item a { color: #e2e2e2; }
+            body.dark-mode .word-header,
+            body.dark-mode .news-item,
+            body.dark-mode .new-item,
+            body.dark-mode .standalone-item,
+            body.dark-mode .new-source-title,
+            body.dark-mode .standalone-header,
+            body.dark-mode .feed-header { border-color: #555555; }
+            body.dark-mode .section-divider { border-top-color: #555555; }
+            body.dark-mode .news-number,
+            body.dark-mode .new-item-number,
+            body.dark-mode .rank-num,
+            body.dark-mode .new-item-rank {
+                color: #eeeeee;
+                background: #494949;
+                border-color: #686868;
+            }
+            body.dark-mode .rank-num.top,
+            body.dark-mode .new-item-rank.top { color: #222222; background: #dedede; }
+            body.dark-mode .rank-num.high,
+            body.dark-mode .new-item-rank.high { color: #222222; background: #ababab; }
+            body.dark-mode .keyword-tag,
+            body.dark-mode .tab-btn { color: #e7e7e7; background: #414141; border-color: #626262; }
+            body.dark-mode .tab-btn:hover { color: #ffffff; background: #555555; }
+            body.dark-mode .tab-btn.active { color: #222222; background: #d8d8d8; }
+            body.dark-mode .tab-bar-wrapper,
+            body.dark-mode .ai-block,
+            body.dark-mode .rss-item,
+            body.dark-mode .error-section,
+            body.dark-mode .ai-warning,
+            body.dark-mode .ai-error,
+            body.dark-mode .ai-info { background: #3a3a3a; border-color: #626262; }
+            body.dark-mode .ai-section { background: #353535; border-color: #626262; }
+            body.dark-mode .ai-block-content { color: #d0d0d0; }
+            body.dark-mode .ai-section-badge,
+            body.dark-mode .badge-new { color: #222222; background: #d8d8d8; }
+            body.dark-mode .footer { background: #262626; border-top-color: #555555; }
+            body.dark-mode .save-dropdown-menu { background: #333333; border-color: #606060; }
+            body.dark-mode .save-dropdown-item { color: #e7e7e7; }
+            body.dark-mode .save-dropdown-item:hover { color: #ffffff; background: #4b4b4b; }
+            body.dark-mode .search-input { color: #eeeeee; background: #333333; border-color: #626262; }
+            body.dark-mode .reading-progress { background: #d0d0d0; }
+            body.dark-mode .fab-btn { color: #222222; background: #d0d0d0; border-color: #e0e0e0; }
+            body.dark-mode .fab-tooltip { background: #333333; border-color: #626262; }
+</style>
     </head>
     <body>
         <div class="reading-progress"></div>
         <div class="container">
             <div class="header">
-                <div class="header-watermark">TrendRadar</div>
+                <div class="header-watermark">章鱼 AI·新闻雷达</div>
                 <div class="save-buttons">
                     <button class="toggle-wide-btn" onclick="toggleWideMode()" title="切换宽屏/窄屏">⛶</button>
                     <button class="toggle-dark-btn" onclick="toggleDarkMode()" title="切换暗色/亮色">☽</button>
@@ -1429,7 +1711,7 @@ def render_html_content(
                         </div>
                     </div>
                 </div>
-                <div class="header-title">热点新闻分析</div>
+                <div class="header-title">章鱼 AI·新闻雷达</div>
                 <div class="header-info">"""
 
     # 使用提供的时间函数或默认 datetime.now
@@ -1565,7 +1847,7 @@ def render_html_content(
     if report_data["failed_ids"]:
         html += """
                 <div class="error-section">
-                    <div class="error-title">⚠️ 请求失败的平台</div>
+                    <div class="error-title">⚠ 请求失败的平台</div>
                     <ul class="error-list">"""
         for id_value in report_data["failed_ids"]:
             html += f'<li class="error-item">{html_escape(id_value)}</li>'
@@ -1658,9 +1940,9 @@ def render_html_content(
                     trend = calculate_rank_trend(rank_timeline, ranks)
                     trend_html = ""
                     if trend == "up":
-                        trend_html = '<span class="trend-up">📈</span>'
+                        trend_html = '<span class="trend-up">↑</span>'
                     elif trend == "down":
-                        trend_html = '<span class="trend-down">📉</span>'
+                        trend_html = '<span class="trend-down">↓</span>'
 
                     stats_html += f'<span class="rank-num {rank_class}">{rank_text}</span>{trend_html}'
 
@@ -1851,7 +2133,7 @@ def render_html_content(
                     rss_html += f'<span class="rss-author">{html_escape(source_name)}</span>'
 
                 if is_new:
-                    rss_html += '<span class="rss-author" style="color: #dc2626;">NEW</span>'
+                    rss_html += '<span class="rss-author" style="color: #4d4d4d;">NEW</span>'
 
                 rss_html += """
                             </div>
@@ -2196,7 +2478,7 @@ def render_html_content(
     if update_info:
         html += f"""
                     <br>
-                    <span style="color: #ea580c; font-weight: 500;">
+                    <span style="color: #727272; font-weight: 500;">
                         发现新版本 {update_info['remote_version']}，当前版本 {update_info['current_version']}
                     </span>"""
 
@@ -2593,7 +2875,7 @@ def render_html_content(
 
                     const link = document.createElement('a');
                     const now = new Date();
-                    const filename = `TrendRadar_热点新闻分析_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}.png`;
+                    const filename = `章鱼AI_新闻雷达_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}.png`;
 
                     link.download = filename;
                     link.href = canvas.toDataURL('image/png', 1.0);
@@ -2822,7 +3104,7 @@ def render_html_content(
 
                     // 下载所有图片
                     const now = new Date();
-                    const baseFilename = `TrendRadar_热点新闻分析_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}`;
+                    const baseFilename = `章鱼AI_新闻雷达_${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}`;
 
                     for (let i = 0; i < images.length; i++) {
                         const link = document.createElement('a');
@@ -3071,7 +3353,7 @@ def render_html_content(
                 var md = lines.join('\\n');
                 var blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
                 var link = document.createElement('a');
-                var filename = 'TrendRadar_' + dateStr + '_' + timeStr.replace(':', '') + '.md';
+                var filename = '章鱼AI_新闻雷达_' + dateStr + '_' + timeStr.replace(':', '') + '.md';
                 link.download = filename;
                 link.href = URL.createObjectURL(blob);
                 document.body.appendChild(link);
@@ -3150,7 +3432,7 @@ def render_html_content(
 
                 // 一键复制：hover 时数字变复制图标
                 var copySvg = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M5 11H3.5A1.5 1.5 0 012 9.5v-7A1.5 1.5 0 013.5 1h7A1.5 1.5 0 0112 2.5V5"/></svg>';
-                var checkSvg = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#22c55e" stroke-width="2"><path d="M3 8.5l3.5 3.5 7-7"/></svg>';
+                var checkSvg = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#9b9b9b" stroke-width="2"><path d="M3 8.5l3.5 3.5 7-7"/></svg>';
                 document.querySelectorAll('.news-item .news-number').forEach(function(numEl) {
                     var item = numEl.closest('.news-item');
                     var titleEl = item ? item.querySelector('.news-title a') : null;
